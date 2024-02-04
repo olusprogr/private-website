@@ -29,7 +29,6 @@ export class LoginComponent {
 
     }
   
-
   login() {
     if (this.username === 'admin' && this.password === 'pass') {
       alert('Logged in successfully');
