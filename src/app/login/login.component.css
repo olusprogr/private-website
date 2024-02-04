@@ -22,8 +22,12 @@
     height: 300px;
     width: 340px;
     background-color: rgba(0, 0, 0, 0.5);
-    border: 2px solid black;
+    border: 2px solid rgb(200, 200, 200);
     border-radius: 8px;
     padding-top: 30px;
     padding-bottom: 30px;
+}
+
+.login-title {
+    color: rgb(200, 200, 200);
 }
