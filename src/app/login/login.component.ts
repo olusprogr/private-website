@@ -4,8 +4,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { Router } from '@angular/router';
+import { UserService } from '../user.service';
 
-
+interface User {
+  name: string;
+  email: string;
+}
 
 @Component({
   selector: 'app-login',
@@ -22,17 +26,26 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   username = '';
   password = '';
+  currentUser: User
 
   constructor(
-    private router: Router
+    private router: Router,
+    private user: UserService
     ) {
-
+      this.currentUser = {
+        name: '',
+        email: ''
+      };
     }
   
   login() {
     if (this.username === 'admin' && this.password === 'pass') {
       alert('Logged in successfully');
       this.router.navigate(['/main'])
+      this.user.setCurrentUser(this.currentUser = {
+        name: "Administrator",
+        email: 'olus.main@gmail.com'
+      })
     } else {
       alert('Invalid credentials');
     }
