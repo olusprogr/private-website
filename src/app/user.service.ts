@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-interface User {
+type User = {
   name: string;
   email: string;
 }
@@ -9,23 +9,22 @@ interface User {
   providedIn: 'root'
 })
 export class UserService {
-  currentUser: User
+  currentUser?: User
 
-  constructor() {
+  constructor() {}
+
+  setCurrentUser(user: User): void {
+    this.currentUser = user
+  }
+
+  getCurrentUser(): User | undefined{
+    return this.currentUser
+  }
+
+  logout(): void {
     this.currentUser = {
       name: '',
       email: ''
     }
   }
-
-  setCurrentUser(user: User) {
-    this.currentUser = user
-  }
-
-  getCurrentUser() {
-    return this.currentUser
-  }
 }
-
-
-// test

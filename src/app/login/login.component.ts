@@ -6,7 +6,7 @@ import {MatInputModule} from '@angular/material/input';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 
-interface User {
+type User = {
   name: string;
   email: string;
 }

@@ -1,6 +1,9 @@
 <div class="body">
-    <h1>Welcome {{this.currentUser}}!</h1>
-    <div class="alert alert-info" role="alert">
-        A simple light alert—check it out!
+    <h1>Welcome {{getUserName()}}!</h1>
+    <div class="d-flex justify-content-around">
+        <div class="alert alert-info" role="alert">
+            A simple light alert—check it out!
+        </div>
+        <button mat-raised-button color="warn" class="mx-5" (click)="lougout()">Logout</button>
     </div>
 </div>
