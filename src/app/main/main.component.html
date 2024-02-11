@@ -1,9 +1,28 @@
 <div class="body">
-    <h1>Welcome {{getUserName()}}!</h1>
-    <div class="d-flex justify-content-around">
-        <div class="alert alert-info" role="alert">
-            A simple light alert—check it out!
+    <div class="ui">
+        <ul class="nav justify-content-center mb-5 mt-3">
+            <li class="nav-item mx-2">
+                <button type="button" class="btn btn-light mx-2">Stats</button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-light mx-2">Hostory</button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-light mx-2">Light</button>
+            </li>
+            <li class="nav-item">
+                <button type="button" class="btn btn-light mx-2">Light</button>
+            </li>
+        </ul>
+        <h1 class="mx-3">Welcome {{getUserName()}}!</h1>
+        <div class="d-flex justify-content-around">
+            <ng-container *ngFor="let item of testingList">
+                <div class="alert alert-info mx-2" role="alert">
+                    {{item}}
+                </div>
+            </ng-container>
+            <button mat-raised-button color="warn" class="mx-5" (click)="lougout()">Logout</button>
         </div>
-        <button mat-raised-button color="warn" class="mx-5" (click)="lougout()">Logout</button>
+        <h1>{{getCPUUsage()}}</h1>
     </div>
 </div>

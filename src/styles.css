@@ -2,3 +2,29 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mt-6 { margin-top: 60px; }
+.mt-7 { margin-top: 70px; }
+.mt-8 { margin-top: 80px; }
+.mt-9 { margin-top: 90px; }
+.mt-10 { margin-top: 100px; }
+
+.mb-6 { margin-bottom: 60px; }
+.mb-7 { margin-bottom: 70px; }
+.mb-8 { margin-bottom: 80px; }
+.mb-9 { margin-bottom: 90px; }
+.mb-10 { margin-bottom: 100px; }
+
+.mx-6 { margin-left: 60px; margin-right: 60px; }
+.mx-7 { margin-left: 70px; margin-right: 70px; }
+.mx-8 { margin-left: 80px; margin-right: 80px; }
+.mx-9 { margin-left: 90px; margin-right: 90px; }
+.mx-10 { margin-left: 100px; margin-right: 100px; }
+
+.my-6 { margin-top: 60px; margin-bottom: 60px; }
+.my-7 { margin-top: 70px; margin-bottom: 70px; }
+.my-8 { margin-top: 80px; margin-bottom: 80px; }
+.my-9 { margin-top: 90px; margin-bottom: 90px; }
+.my-10 { margin-top: 100px; margin-bottom: 100px; }
+
+

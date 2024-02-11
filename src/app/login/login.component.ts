@@ -21,7 +21,10 @@ type User = {
     MatInputModule,
   ],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: [
+    './login.component.css',
+    '../../styles.css'
+  ]
 })
 export class LoginComponent {
   username = '';

@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import * as os from 'os-utils'
+import { resolve } from 'path';
 
 type User = {
   name: string,
@@ -12,13 +15,15 @@ type User = {
   selector: 'app-main',
   standalone: true,
   imports: [
-    MatButtonModule
+    MatButtonModule,
+    CommonModule
   ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css'
 })
 export class MainComponent {
   currentUser: User | undefined
+  testingList: string[] = ['test1', 'test2', 'test3']
 
   constructor(
     private isUser: UserService,
