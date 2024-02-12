@@ -3,8 +3,7 @@ import { UserService } from '../user.service';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import * as os from 'os-utils'
-import { resolve } from 'path';
+
 
 type User = {
   name: string,
